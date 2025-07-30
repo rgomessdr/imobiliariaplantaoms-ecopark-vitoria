@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EcoPark Vitória - Pré-Lançamento Exclusivo</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9fafb;}
+    header {
+      background-image: url('Area.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      min-height: 400px;
+      position: relative;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      z-index: 1;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,40,0,0.55);
+      z-index: 0;
+    }
+    header > div {
+      position: relative;
+      z-index: 1;
+    }
+    .cta-btn {
+      padding: 16px 32px;
+      background: #22c55e;
+      color: #fff;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 18px;
+      box-shadow: 1px 2px 8px #193d2950;
+      transition: background 0.2s;
+    }
+    .cta-btn:hover { background: #16a34a; }
+    .section { max-width: 1100px; margin: 36px auto; padding: 0 18px;}
+    .benefits { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 24px;}
+    .benefit {
+      flex: 1 1 220px;
+      background: #fff;
+      padding: 22px;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px #0001;
+      text-align: center;
+      min-width: 200px;
+    }
+    .benefit span { font-size: 2.2rem; display: block; margin-bottom: 6px;}
+    h2 { text-align: center; color: #166534; margin-bottom: 16px;}
+    .gallery { display: flex; gap:18px; margin-top: 18px; flex-wrap: wrap;}
+    .gallery img { width: 100%; max-width: 340px; height: 190px; object-fit: cover; border-radius: 8px; box-shadow: 0 1px 6px #0002; }
+    .about, .faq, .form-section { background: #fff; border-radius: 14px; box-shadow: 0 2px 12px #0001; padding: 28px; margin-top:30px;}
+    .about li { margin-bottom: 8px; }
+    .form-section { max-width: 480px; margin:40px auto;}
+    .form-section form { display: flex; flex-direction: column;}
+    .form-section label { margin-top: 12px; margin-bottom: 4px; font-weight: bold; color: #166534;}
+    .form-section input, .form-section select { padding: 12px; border-radius: 6px; border: 1px solid #d1d5db; font-size:1rem;}
+    .form-section button { background: #22c55e; border:none; color:#fff; font-weight: bold; padding: 13px; border-radius: 6px; margin-top:18px; cursor:pointer;}
+    .form-section button:hover { background:#16a34a;}
+    .form-section small { font-size: 0.93em; color: #737373;}
+    .faq { max-width: 700px; margin:36px auto;padding:24px;}
+    .faq b { color: #166534; }
+    footer { background: #166534; color: #fff; padding: 18px; text-align: center; margin-top: 36px;}
+    footer a { color: #b9e0c7; text-decoration: underline;}
+    @media(max-width:830px) {
+      .benefits { flex-direction: column; gap:10px;}
+      .gallery { flex-direction:column; align-items: center;}
+      .section { padding:0 7px;}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1 style="font-size:2.4rem; font-weight: bold; margin-bottom: 10px;">EcoPark Vitória – Pré-Lançamento VIP</h1>
+    <p style="font-size: 1.25rem;">Loteamento com infraestrutura completa em Sidrolândia.<br>Cadastre-se até <b>18/08</b> e garanta prioridade!</p>
+    <button class="cta-btn" onclick="document.getElementById('formulario').scrollIntoView({behavior:'smooth'})">Quero meu acesso VIP!</button>
+    <div style="margin-top:10px;font-size:.98em; color:#b9e0c7;">* Não vendemos nem reservamos lote nesta fase</div>
+  </div>
+</header>
+
+<section class="section">
+  <h2>Por que escolher o EcoPark Vitória?</h2>
+  <div class="benefits">
+    <div class="benefit">
+      <span>📍</span>
+      <b>1km da BR-060<br>2,8km do centro</b>
+      <div style="color:#64748b; margin-top:4px;font-size:.96em;">Localização privilegiada em Sidrolândia</div>
+    </div>
+    <div class="benefit">
+      <span>🌳</span>
+      <b>Natureza preservada</b>
+      <div style="color:#64748b; margin-top:4px;font-size:.96em;">Trilhas, praças, lazer e áreas verdes</div>
+    </div>
+    <div class="benefit">
+      <span>🏗️</span>
+      <b>Infraestrutura completa</b>
+      <div style="color:#64748b; margin-top:4px;font-size:.96em;">Ruas pavimentadas, iluminação, água e esgoto</div>
+    </div>
+    <div class="benefit">
+      <span>💰</span>
+      <b>Pagamentos flexíveis</b>
+      <div style="margin-top:4px;color:#64748b;font-size:.96em;">
+        Entrada de 10% em até 4x<br>
+        Até 48x mensais <b>(sem juros)</b><br>
+        Até 240x*<br>
+        A partir de <b>R$520/mês</b>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Localização e Visualização</h2>
+  <div class="gallery">
+    <img src="Area.jpg" alt="Área do Loteamento">
+    <img src="Mapa1.jpg" alt="Mapa localização – Sidrolândia">
+    <img src="Mapa2.jpg" alt="Mapa acesso BR-060">
+  </div>
+  <div style="text-align:center; color:#575a64; margin-top:9px;font-size:.95em">
+    Apenas 1km do acesso à BR-060, 2,8km do centro de Sidrolândia.<br>
+    <span style="font-size:0.98em">Veja os mapas acima retirados do material institucional do empreendimento.</span>
+  </div>
+</section>
+
+<section class="section about">
+  <h2>Efort Incorporadora: solidez e confiança</h2>
+  <ul style="columns:2; max-width:420px; margin:18px auto 6px; font-size:1.06em; color:#14532d;font-weight:500;">
+    <li>10+ anos de mercado</li>
+    <li>19 obras entregues</li>
+    <li>2.670+ lotes comercializados</li>
+    <li>R$500 milhões em VGV</li>
+  </ul>
+  <div style="font-size:.96em;color:#64748b;margin-top:8px">
+    Excelência reconhecida em urbanismo no Mato Grosso do Sul.
+  </div>
+</section>
+
+<section class="form-section" id="formulario">
+  <h2>Garanta sua vaga VIP</h2>
+  <form>
+    <label>Nome completo*</label>
+    <input required type="text" placeholder="Seu nome completo">
+
+    <label>E-mail*</label>
+    <input required type="email" placeholder="Seu melhor e-mail">
+
+    <label>WhatsApp*</label>
+    <input required type="tel" placeholder="(DDD) 9 9999-9999">
+
+    <label>RG*</label>
+    <input required type="text" placeholder="Seu RG">
+
+    <label>CPF*</label>
+    <input required type="text" placeholder="Seu CPF">
+
+    <label>Endereço Completo*</label>
+    <input required type="text" placeholder="Rua, Número, Bairro, Cidade, Estado, CEP">
+
+    <label>Estado civil*</label>
+    <select required>
+      <option value="">Selecione</option>
+      <option>Solteiro(a)</option>
+      <option>Casado(a)</option>
+      <option>Divorciado(a)</option>
+      <option>Viúvo(a)</option>
+      <option>Outro</option>
+    </select>
+
+    <div style="margin:14px 0 8px 0;">
+      <input type="checkbox" id="lgpd" required>
+      <label for="lgpd" style="font-size:.98em;color:#222;">Li e concordo com a <a href="#" style="color:#15803d;text-decoration:underline">Política de Privacidade</a>.</label>
+    </div>
+    <button type="submit">Cadastrar Agora</button>
+    <small>Seus dados serão usados exclusivamente para contato sobre o EcoPark Vitória, conforme LGPD.</small>
+  </form>
+</section>
+
+<section class="faq">
+  <h2>Dúvidas Frequentes</h2>
+  <div>
+    <p>
+      <b>Já posso reservar lote?</b> Não, estamos apenas coletando pré-cadastros.<br>
+      <b>Quando será o lançamento oficial?</b> Após 18/08/2025, conforme cronograma.<br>
+      <b>É seguro fornecer meus dados?</b> Sim, são usados exclusivamente para contato sobre o EcoPark Vitória, conforme a LGPD.
+    </p>
+  </div>
+</section>
+
+<footer>
+  EcoPark Vitória – Efort Incorporadora | © 2025 Todos os Direitos Reservados <br>
+  Corretor: Francisco Ortega – CRECI/MS 5487 &nbsp; | &nbsp; WhatsApp: (67) 9 9638-8893
+  <br>
+  <small><a href="#">Política de Privacidade</a></small>
+</footer>
+
+</body>
+</html>
